@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<style type="text/css">
+	.box{
+		text-align: center;
+	}
+	
+</style>
+
+<script type="text/javascript">
+
+	function gugudan() {
+		dan = document.f.dan.value;
+// 		alert(dan);
+// 		if(dan == "" || isNaN(dan)){
+// 			alert("출력할 단을 정확히 입력하세요");
+// 			document.f.dan.value ="";
+			
+// 		}
+		res = "";
+		for(i =1;i<=9;i++){
+			res += dan + " x " + i + " = " + dan * i +"\n";
+			res += "\n";
+		}
+		document.f.result.innerHTML = res;
+	}
+
+</script>
+</head>
+<body>
+<div class="box">
+	<h2> form연습1 </h2>
+	<form name="f">
+		<input type="text" size="2"  name="dan"> 단
+		<input type="button" value="출력" onclick="gugudan()"><p>
+		<textarea name="result" cols="15" rows="20"></textarea>
+	</form>
+<!-- 	<div id="result"></div> -->
+
+</div>
+
+</body>
+</html>

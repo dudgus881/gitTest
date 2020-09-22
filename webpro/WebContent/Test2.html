@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+	<title></title>
+	<meta charset="UTF-8">
+	<style>
+	  p{
+			background-color : pink;
+			color : blue;
+			width : 300px;
+			height : 100px;
+	  }
+	  span{
+			background-color : lime;
+			color : blue;
+			display : inline-block;
+			width : 300px;
+			height : 100px;
+			margin-top : 10px;
+			margin-bottom : 10px;
+	  }
+	  img{
+			width : 300px;
+			height : 300px;
+	  }
+	</style>
+  </head>
+  
+  <body>
+	p태그는 paragraph의 약자로 문단을 나타낸다.<br>
+	p태그는 br태그가 없어도 자동으로 줄이 바뀐다.<br>
+	앞뒤(위아래) 줄 사이에 여백을 만든다.<br>
+	한줄 전체를 차지한다. -block요소 <br>
+	가로크기(width)와 세로크기(height)를 지정할수있다.
+	<p>Hello~~ HTML~~</p>
+	<p>style를 이용해서 문서를 꾸며줘요</p>
+	<br>
+	span태그는 자동으로 줄이 안바뀌기 때문에
+	br태그로 줄바꿈을 한다.<br>
+	지정된 영역크기만큼만 차지한다. -inline요소 <br>
+	가로세로크기,여백(margin)를 지정 할 수 없다.<br>
+	단,스타일에 display : inline-block; 을 설정하면 <br>
+	가로세로크기,여백(margin)를 지정 할 수 있다.<br>
+	앞뒤 여백을 주기위해서 스타일에 margin 값을 부여한다.<br>
+	<span>무궁화 꽃이 피었습니다.</span><br>
+	<span>수국꽃이 만발하였습니다.</span>
+	<br>
+	<br>
+	img 태그는 이미지를 나타내는 태그이다.<br>
+	필수 속성으로 src="이미지이름"에 표시하고자 하는 이미지의 이름을 설정한다.<br>
+	img의 크기를 설정할수있다.<br>
+	
+	<img src="images/spongebob.png">
+	<br>
+	a태그는 페이지이동을 시행하는 태그 inline요소이다.<br>
+	필수속성으로 hrdf="페이지이름"<br>
+	<a href="http://www.naver.com">네이버</a>
+	<br>
+	<br>
+	
+	주석처리문<br>
+	-> !--
+	<!-- 주석 설명문 -->
+	
+  </body>
+ 
+</html>

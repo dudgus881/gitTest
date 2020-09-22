@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>컴마왕</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+   body{
+      height : 100%;
+      min-width: 1000px;
+   }
+   header{
+      box-sizing: border-box;
+      background: #FFFFFF;
+      margin: 1px;
+      height : 70px;
+      
+   }
+   header img{
+      width: 200px;
+      height: 40px;
+      float : left;
+      position : relative;
+      top : 10px;
+      left: 10px;
+   }
+   header a{
+      box-sizing: border-box;
+      float:left;
+      color : #000000;
+      font-size: 0.8em;
+      position : relative;
+      top : 10px;
+      left : 20px;
+      
+   }
+   a:link{
+      text-decoration: none;
+   }
+   a#cart{
+      text-decoration: underline;
+   }
+   nav{
+      box-sizing: border-box;   
+      width : 100%;
+      height : 55px;
+      clear : both;
+      border : 0px dotted grey;
+      border-left : none;
+      border-right : none;
+      text-align: center;
+      font-weight: bold;
+   }
+   
+   nav>ul>li{
+      display: inline;
+      letter-spacing: 5px; 
+      margin : 36px;
+      clear : both;
+      list-style-type: none;
+   }
+   
+   nav>ul>li>ul{
+      display: none;
+   }
+   
+   section{
+      box-sizing: border-box;
+      margin: 2px;
+      margin-left : 1%;
+      width: calc(65% - 1%);
+      height: 800px;
+      display : inline-block;
+   }   
+   aside#left{
+      box-sizing: border-box;
+      margin: 2px;
+      width: calc(18% - 1%);
+      height: 800px;
+      float: left;
+      background: #6E6E6E;
+   }
+   #mt{
+      box-sizing: border-box;
+      height: 40px;
+      margin: 25px;
+   }
+   aside#left li{
+      list-style-type: none;
+      padding : 15px;
+      float : left;
+      width : 100%;
+      height : 45px;
+      background : #6E6E6E;
+      border : 0.5px solid darkgrey; 
+      text-align: center;
+      position : relative;
+      right : 40px;
+      border-right : none;
+      
+   }
+   aside#left ul a {
+      color : white;
+      
+   }
+   aside#left ul a:hover{
+ 		font-size: 1.5em;
+/*  		text-decoration: overline; */
+      
+      
+   }
+   
+   aside#right{
+      box-sizing: border-box;
+      margin: 2px;
+      padding: 5px;
+      width: calc(18% - 1%);
+      float : right;
+      height: 800px;
+      background:#FAFAFA;
+   }
+   
+   article{
+      box-sizing: border-box;
+      margin: 2px;
+      padding: 5px;
+      width: 100%;
+      height : 100%;
+   }
+   
+   iframe{
+      height: 100%;
+      width: 100%;
+      border : none;
+   }
+   
+   footer{
+      box-sizing: border-box;
+      margin: 2px;
+      padding: 5px;
+      background: #FFFFFF;
+      height : 150px;
+   }
+   #d1{
+      color :#000000;
+      font-size: 0.8em;
+   }
+   
+   
+   
+</style>
+</head>
+<body>
+   <header>
+        <h1>
+            <img src="컴마왕 로고.png">
+            <a href="">조립피씨 전문 No.1 컴마왕 입니다.</a>
+       </h1>
+   </header>
+   
+   <nav>
+        <ul>
+            <li><a href="http://www.danawa.com/">다나와</a></li>
+            <li><a href="https://mindpc.co.kr/">마인드피씨</a></li>
+            <li><a href="http://comgoon.co.kr/">컴군</a></li>
+            <li><a href="http://www.assacom.com/">아싸컴</a></li>
+            <li><a href="https://www.blueit.co.kr/">블루아이티</a></li>
+            <li><a href="https://www.omypc.co.kr/shopuser/index.html">오마이피씨</a></li>
+        </ul>
+    </nav>
+    
+   
+    
+    <aside id="left">
+        <div id="mt">
+        </div>
+         <ul> 
+               <li><a id="a1" href="컴마왕조립PC.html" target="ifr">컴마왕 조립 PC</a></li>
+               <li><a href="본체+모니터패키지.html" target="ifr">본체+모니터 패키지</a></li>
+               <li><a href="모니터.html" target="ifr">모니터</a></li>
+               <li><a href="게이밍의자.html" target="ifr">게이밍 의자</a></li>
+               <li><a href="프린터,스캐너.html" target="ifr">프린터.스캐너</a></li>
+               <li><a href="네트워크,공유기.html" target="ifr">네트워크.공유기</a></li>
+               <li><a href="키보드,마우스.html" target="ifr">키보드.마우스</a></li>
+            </ul>
+            <form action="#">
+            
+            </form>
+    </aside>
+     <section>
+        <article >
+            <iframe src="컴마왕로고.html" name="ifr"></iframe>
+        </article>
+    </section>
+    
+    <aside id="right">
+        <h2>Shopping Cart</h2>
+		<p>현재 쇼핑카트에 물품이 없습니다</p>
+		<p><a href="쇼핑카트.html" target="ifr">쇼핑카트 보기</a></p>
+		<h2>Log In</h2>
+		<form action="login.jsp" method="post">
+			아이디<br>
+			<input type="text" name="id">
+			<br>패스워드<br>
+			<input type="password" name="pass"><br>
+			<br>
+			<input type="button" value="로그인" onclick="alert('로그인되었습니다.')">
+			<input type="reset" value="초기화"><br>
+		</form>
+	<p> <a href="회원가입.html" target="ifr">회원가입</a>  
+		<a href="회원계정찾기.html" target="ifr">회원계정찾기</a></p>
+</aside>
+    <footer>
+   		<p><h4>Company Information</h4></p>
+			<ul>
+			 <p><li id="d1">서울특별시 용산구 청파로20길 34, 22동 6층 6001-1호 (한강로2가, 선인상가) 주식회사 컴마왕컴퍼니</li>
+				<li id="d1">대표 : 한석만 개인정보보호 담당자 : 한석만</li>
+				<li id="d1">상담 및 AS : 1544-1768 FAX : 02-2120-3059 이메일 : gkstjraks50@nate.com</li>
+				<li id="d1">사업자번호 : 315-87-00427 통신판매신고 : 2016-서울용산-01085 분쟁조정기관표시 : 소비자보호원 호스팅제공자 : (주)코리아서버호스팅</li>
+			</ul></p>
+    </footer>
+    
+</body>
+</html>

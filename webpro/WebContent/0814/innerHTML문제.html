@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style type="text/css">
+	.box{
+		text-align: center;
+	}
+	
+</style>
+
+<script type="text/javascript">
+	function proc1() {
+		var num;
+		num = document.getElementById("num").value; // 사용된 value는 <body>의 <option>의 value값을 의미
+		
+		//구구단 과정
+		var result = "";
+		for (var i = 1; i <= 9; ++i) {
+		 result += num + " * " + i + " = " + (num * i) + "<br>";
+		}
+		document.getElementById("result").innerHTML = result;
+	}
+	
+</script>
+</head>
+<body>
+
+<div class="box">
+
+	<h2> innerHTML문제 </h2>
+<form>
+   <select id="num">
+    <option value="1">1 단</option>
+    <option value="2">2 단</option>
+    <option value="3">3 단</option>
+    <option value="4">4 단</option>
+    <option value="5">5 단</option>
+    <option value="6">6 단</option>
+    <option value="7">7 단</option>
+    <option value="8">8 단</option>
+    <option value="9">9 단</option>
+   </select> 
+   <input type="button" value="출력" onclick="proc1()">
+   <h2>결과출력</h2>
+ </form>
+	<div id="result"></div>
+
+</div>
+</body>
+</html>

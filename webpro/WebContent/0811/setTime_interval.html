@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script type="text/javascript">
+
+	function proc1() {
+		result1 = document.querySelector("#result1");
+		
+		setTimeout(function(){
+			result1.style.backgroundColor = "red";
+		} , 500);
+	}
+	
+	function proc2(but) { //but는 클릭한 확인버튼의 객체변수이다.
+		
+		but.style.display = "none";
+		ok = but;
+		//#result2의 요소를 검색하기
+		result2 = document.getElementById('result2');
+		
+		a = setInterval(function(){
+			cr = Math.floor(Math.random()*255);
+			cg = Math.floor(Math.random()*255);
+			cb = Math.floor(Math.random()*255);
+			
+			/*
+				색을 표현하는 방법
+				1. red, green, blue
+				2. rgb(200,198,124)
+				3. rgb(20%, 100%, 89%)
+				4. #fffad1 cr.toString(16)
+			*/
+			
+// 			result2.style.backgroundColor = "rgb(" + cr + "," + cg + "," + cb + ")";
+			
+			result2.style.backgroundColor = `rgb(${cr}, ${cg}, ${cb})`; //(``) : 백틱을 사용하는 템플릿 리터럴 
+			
+			console.log(a);
+		}, 100);
+	}
+	function proc3() {
+		ok.style.display = "inline";
+		clearInterval(a);
+	}
+
+</script>
+
+</head>
+<body>
+
+<div class="box">
+	<h3>1. setTimeout </h3>
+	setTimeout(code, millisec); 지정된 millisec가 경과되면 code를 실행하고 종료 한다.<br>
+	확인버튼을 클릭하면 result1의 배경색을 변경 한다.<br>
+	<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<br><br>
+	<div id="result1"></div>
+</div>
+
+<div class="box">
+	<h3>2. setInterval </h3>
+	변수 = setInterval(code, millisec); 지정된 millisec가 경과할때 마다 주기적으로 code를 실행한다.<br>
+	ClearInterval(변수) : setInterval 의 수행기능을 종료한다.<br>
+	확인버튼을 클릭하면 result2의 배경색을 변경 한다.<br>
+	<br>
+	<input type="button" value="확인" onclick="proc2(this)">
+	<input type="button" value="종료" onclick="proc3()">
+	<br><br>
+	<div id="result2"></div>
+</div>
+</body>
+</html>

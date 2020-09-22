@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<style type="text/css">
+	img{
+		width: 100px;
+		height: 100px;
+	}
+</style>
+
+<script type="text/javascript">
+	window.onload = function(){
+		//아이디가 start인 요소 검색 input버튼
+		start = document.getElementById('start');
+		//아이디가 end인 요소 검색
+		end = document.getElementById('end');
+	}
+	
+	function proc1() {
+		// 확인버튼이 사라지고
+		start.style.display = "none";
+		// 종료버튼이 나타난다.
+		end.style.display = "inline";
+		
+		abcd = document.querySelector("#result1");
+		
+		a = setInterval(function(){
+			// result1에서 첫번째 요소를 선택한다.
+			fc = abcd.firstChild;
+			
+			// result1에 선택한 첫번째 요소를 추가한다.
+			abcd.appendChild(fc);
+			
+		},500);
+	}
+	
+	function proc2() {
+		// setInterval 종료
+		clearInterval(a);
+		// 확인버튼이 나타나고
+		// 종료버튼이 사라진다.
+		start.style.display = "inline";
+		endInterval(a);
+	}
+</script>
+
+</head>
+<body>
+
+<div class="box">
+	<h3>1. 이미지회전 </h3>
+	1초마다 한번씩 맨처음 이미지를 마지막으로 옮긴다.<br>
+	첫번째 이미지를 선택 : firstChild<br>
+	result1에 추가한다. : appendChild<br>
+	기존에 이미 존재 했던 요소를 추가하면 기존에 있던 요소는 삭제된다. - 잘라내기/붙여넣기<br>
+	<br>
+	<input id="start"type="button" value="확인" onclick="proc1()">
+	<input id="end"type="button" value="종료" onclick="proc2()">
+	<br><br>
+	<div id="result1">
+		<img src="../images/스폰지밥.jpg" alt="스폰지밥">
+		<img src="../images/뚱이.jpg" alt="뚱이">
+		<img src="../images/징징이.jpg" alt="징징이">
+		<img src="../images/집게사장.png" alt="집게사장">
+		<img src="../images/다람이.jpg" alt="다람이">
+		<img src="../images/플랭크톤.png" alt="플랭크톤">
+		<img src="../images/오이왕자.jpg" alt="오이왕자">
+	</div>
+</div>
+</body>
+</html>

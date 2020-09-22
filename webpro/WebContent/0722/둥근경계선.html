@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+  div{
+  	width: 170px;
+  	height: 170px;
+  	border: 5px solid orange;
+  	margin: 20px;
+  	padding: 20px;
+  }
+  #d2{
+  	border-radius: 20px;
+  }
+  #d3{
+  	border-radius: 20px 50px; 
+  }
+  #d4{
+  	border-radius: 20px 50px 30px; 
+  }
+  #d5{
+  	border-radius: 50%; 
+  }
+  #d6{
+  	border-radius: 50% 20%; 
+  }
+  #d7{
+  	width: 170px;
+  	height: 170px;
+  	background: lightblue;
+  	box-shadow: 20px 10px 25px gray;
+  	color: white;
+  }
+</style>
+</head>
+<body>
+<pre>
+border-radius: 1,3번 20px 2,4번 50px; //대각선으로 
+border-radius: 1번 20px 2,4번 50px 3번 30px; 
+border-radius: 50%; //div에서 직사각형이면 타원, 정사각형이면 원
+</pre>
+<div id="d1"></div>
+
+<div id="d2">
+#d2{<br>
+  	border-radius: 20px; <br>
+  }
+</div>
+
+<div id="d3">
+#d3{<br>
+  	border-radius: 20px 50px; <br>
+  }</div>
+  
+<div id="d4">
+#d4{<br>
+  	border-radius: 20px 50px 30px; <br>
+  }
+</div>
+
+<div id="d5">
+#d5{<br>
+  	border-radius: 50%; <br>
+  }
+</div>
+
+<div id="d6">
+#d6{<br>
+  	border-radius: 50% 20%; <br>
+  }
+</div>
+
+<div id="d7">
+#d7{<br>
+  	width: 100px;<br>
+  	height: 30px;<br>
+  	background: lightblue;<br>
+  	box-shadow: 20px 10px 25px gray;<br>
+  	color: white;<br>
+  }
+</div>
+
+</body>
+</html>

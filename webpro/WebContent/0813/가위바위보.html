@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script type="text/javascript">
+
+
+	var winMsg = 0;
+	var drawMsg = 0;
+	var loseMsg = 0;
+	var selectChoice = "";
+	
+	function choice(userChoice) {
+		var fm = document.frm;
+		var comChoice = Math.round((Math.random() * 2) + 1)
+		var msg = "";
+		switch (userChoice) {
+		case "1":
+			if (comChoice == 1) {
+				msg += '비겼다-_-';
+				fm.comImg.src = "../images/바위_우.png";
+				drawMsg++;
+				break;
+			}
+			if (comChoice == 2) {
+				msg += '이겼다^^';
+				fm.comImg.src = "../images/가위_우.png";
+				winMsg++;
+				break;
+			}
+			if (comChoice == 3) {
+				msg += '졌다ㅜㅜ';
+				fm.comImg.src = "../images/보_우.png";
+				loseMsg++;
+				break;
+			}
+		case "2":
+			if (comChoice == 1) {
+				msg += '졌다ㅜㅜ';
+				fm.comImg.src = "../images/바위_우.png";
+				loseMsg++;
+				break;
+			}
+			if (comChoice == 2) {
+				msg += '비겼다-_-';
+				fm.comImg.src = "../images/가위_우.png";
+				drawMsg++;
+				break;
+			}
+			if (comChoice == 3) {
+				msg += '이겼다^^';
+				fm.comImg.src = "../images/보_우.png";
+				winMsg++;
+				break;
+			}
+		case "3":
+			if (comChoice == 1) {
+				msg += '이겼다^^';
+				fm.comImg.src = "../images/바위_우.png";
+				winMsg++;
+				break;
+			}
+			if (comChoice == 2) {
+				msg += '졌다ㅜㅜ';
+				fm.comImg.src = "../images/가위_우.png";
+				loseMsg++;
+				break;
+			}
+			if (comChoice == 3) {
+				msg += '비겼다-_-';
+				fm.comImg.src = "../images/보_우.png";
+				drawMsg++;
+				break;
+			}
+		}
+		fm.msgBox.value = msg;
+		fm.msgBox2.value = winMsg + "승 " + drawMsg + "무 " + loseMsg + "패";
+
+	}
+	function goAndStop(userChoice) {
+		var fm = document.frm;
+// 		fm.comImg.src = "../images/스폰지밥.jpg";
+		selectChoice = userChoice;
+		setTimeout('choice(selectChoice)', 1000);
+		if (userChoice == 1) {
+			fm.userImg.src = "../images/바위_좌.png";
+		} else if (userChoice == 2) {
+			fm.userImg.src = "../images/가위_좌.png";
+		} else if (userChoice == 3) {
+			fm.userImg.src = "../images/보_좌.png";
+		}
+	}
+</script>
+
+</head>
+<body>
+
+<div class="box"> 
+	<h3>2. 가위가위보 </h3>
+	컴퓨터는 랜덤으로 결정<br>
+	사용자는 입력<br>
+	가위바위보 해당하는 이미지를 변경한다.<br>
+	<br>
+		<table border="1">
+			<tr>
+				<td colspan="4" align="center" class="title">가위,바위,보 게임</td>
+			</tr>
+			
+			<tr>
+<!-- 				<td align="center" width="600px">옆의 바위,가위,보 중<br>하나를 선택하세요</td> -->
+				
+				<td align="center" width="150px"><img src="../images/바위_좌.png"
+						border="0"></td>
+				<td align="center" width="150px"><img src="../images/가위_좌.png"
+						border="0"></td>
+				<td align="center" width="150px"><img src="../images/보_좌.png"
+						border="0"></td>
+			</tr>
+			
+<!-- 			<tr> -->
+<!-- 				<td align="center">결과 :</td> -->
+<!-- 				<td><input name="msgBox" type="text" size="10"></td> -->
+<!-- 				<td align="center">전적 :</td> -->
+<!-- 				<td><input name="msgBox2" type="text" size="10"></td> -->
+<!-- 			</tr> -->
+
+			<tr>
+				<td colspan="2" class="title">사용자</td>
+				<td colspan="2" class="title">컴퓨터</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="center"><img src="../images/"
+					border="0" name="userImg"></td>
+				<td colspan="2" align="center"><img src="../images/"
+					border="0" name="comImg"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

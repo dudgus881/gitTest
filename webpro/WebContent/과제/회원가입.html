@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+label{
+		display : inline-block;
+		width : 150px;
+		height : 40px;
+	}
+	
+filedset{
+	width : 80%;
+	}
+form{
+	width : 600px;
+	height : 600px;
+}
+
+span{
+	margin : 150px;
+
+}
+
+button{
+	margin : 20px;
+}
+
+.in{
+	margin : 15px;
+	width : 100px;
+	height : 30px;
+}
+
+</style>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>회원정보입력</legend>
+			<label>아이디</label>
+			<input type="text"><button type="button" onclick="alert('사용하실 수 있습니다')">중복검사</button><br>
+			<label>패스워드</label>
+			<input type="text"><br>
+			<label>패스워드 확인</label>
+			<input type="text"><br>
+			<label>이름</label>
+			<input type="text"><br>
+			<label>휴대폰 번호</label>
+			<input type="text"><br>
+			<label>이메일</label>
+			<input type="email"><br>
+			<label>생년월일</label>
+			<input type="date"><br>
+			<label>홈페이지</label>
+			<input type="text"><br>
+			<span><input type = "radio" value = "Male" name = "gender">남성</span><br>
+			<span><input type = "radio" value = "Female" name = "gender">여성</span><br>
+		</fieldset>
+	<input class="in" type="submit" value="제출" onclick="alert('회원가입이 완료되었습니다!')">
+	<input class="in" type="reset" value="초기화"><br>
+	</form>
+</body>
+</html>
